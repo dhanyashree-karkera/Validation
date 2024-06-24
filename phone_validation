@@ -1,4 +1,18 @@
-<div class="col-md-2">
+//html file
+<div class="phoneno">
         <label for="phone">Phone</label>
-                                    <input oninput="validateInput(this)" type="tel" class="form-control" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" required>
-                                    </div>
+        <input oninput="validateInput(this)" type="tel" class="form-control" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+</div>
+
+//php file
+
+function validateInput(input) {
+    // Remove non-numeric characters
+    input.value = input.value.replace(/\D/g, '');
+    // Log the cleaned phone number to the console
+    console.log(input.value);
+    // Limit the length to 10 digits
+    if (input.value.length > 10) {
+        input.value = input.value.slice(0, 10);
+    }
+}    
