@@ -1,1 +1,28 @@
+//html file
+<div class="email">
+        <label for="contact-email">Email</label>
+        <input type="text" class="form-control" id="contact-email" name="contact-email" value="" oninput="validateContactEmail(this)">
+        <span id="contact-error-message"></span>
+</div>
+
+//js file
+function validateEmail(input) {
+      var email = input.value;
+      console.log(email);
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      
+      if (!emailPattern.test(email)) {
+          document.getElementById("email-error-message").innerHTML = "Invalid email address";
+          document.getElementById("email-error-message").style.color = "red";
+          
+      } else {
+          document.getElementById("email-error-message").innerHTML = "";
+      }
+  }
+
+
+
+
+
+
 
