@@ -1,0 +1,4 @@
+<div class="col-md-2">
+        <label for="phone">Phone</label>
+                                    <input oninput="validateInput(this)" type="tel" class="form-control" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                                    </div>
